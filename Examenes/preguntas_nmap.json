@@ -1,202 +1,211 @@
-[
-    {
-        "Pregunta": "¿Qué hace Nmap?",
-        "Opciones": [
-            "Escanea redes y hosts en busca de puertos y servicios.",
-            "Es un servidor web.",
-            "Edita archivos de configuración de red.",
-            "Sustituye al firewall del sistema."
-        ],
-        "Respuesta": "Escanea redes y hosts en busca de puertos y servicios."
-    },
-    {
-        "Pregunta": "¿Qué hace la opción -p?",
-        "Opciones": [
-            "Especifica puertos a escanear.",
-            "Cambia el tiempo de espera.",
-            "Activa detección de OS.",
-            "Guarda la salida en un archivo."
-        ],
-        "Respuesta": "Especifica puertos a escanear."
-    },
-    {
-        "Pregunta": "Si Nmap muestra un puerto como filtered, ¿qué significa?",
-        "Opciones": [
-            "Está definitivamente abierto.",
-            "Está cerrado.",
-            "Un filtro (firewall) bloqueó la respuesta y no puede determinarse si está abierto.",
-            "El puerto usa UDP únicamente."
-        ],
-        "Respuesta": "Un filtro (firewall) bloqueó la respuesta y no puede determinarse si está abierto."
-    },
-    {
-        "Pregunta": "¿Qué hace -sV?",
-        "Opciones": [
-            "Escanea solo puertos cerrados.",
-            "Detecta la versión del servicio que corre en el puerto.",
-            "Ejecuta scripts NSE por defecto.",
-            "Realiza escaneo UDP."
-        ],
-        "Respuesta": "Detecta la versión del servicio que corre en el puerto."
-    },
-    {
-        "Pregunta": "¿Qué hace -A?",
-        "Opciones": [
-            "Escanea únicamente puertos altos.",
-            "Hace el escaneo más silencioso.",
-            "Solo detecta OS.",
-            "Modo agresivo: combina -sV, -O, traceroute y scripts NSE."
-        ],
-        "Respuesta": "Modo agresivo: combina -sV, -O, traceroute y scripts NSE."
-    },
-    {
-        "Pregunta": "Diferencia entre -sS y -sT:",
-        "Opciones": [
-            "-sS es SYN scan (stealth, requiere privilegios); -sT es connect (usa la pila del SO).",
-            "-sS es UDP; -sT es TCP.",
-            "-sS hace ping; -sT escanea puertos.",
-            "No hay diferencia."
-        ],
-        "Respuesta": "-sS es SYN scan (stealth, requiere privilegios); -sT es connect (usa la pila del SO)."
-    },
-    {
-        "Pregunta": "Si un host aparece como down, ¿qué opción fuerza a Nmap a intentar escanear puertos de todos modos?",
-        "Opciones": [
-            "-Pn",
-            "-sn",
-            "-sU",
-            "-T5"
-        ],
-        "Respuesta": "-Pn"
-    },
-    {
-        "Pregunta": "¿Cómo escaneas todos los puertos TCP de 172.17.0.2?",
-        "Opciones": [
-            "nmap -p- 172.17.0.2",
-            "nmap -sU 172.17.0.2",
-            "nmap -sn 172.17.0.2",
-            "nmap -O 172.17.0.2"
-        ],
-        "Respuesta": "nmap -p- 172.17.0.2"
-    },
-    {
-        "Pregunta": "¿Qué son los scripts NSE?",
-        "Opciones": [
-            "Extensiones del kernel.",
-            "Errores detectados por Nmap.",
-            "Nmap Scripting Engine: pequeños scripts para detección y checks avanzados.",
-            "Plugins de navegador."
-        ],
-        "Respuesta": "Nmap Scripting Engine: pequeños scripts para detección y checks avanzados."
-    },
-    {
-        "Pregunta": "¿Cómo guardas la salida en texto plano como resultado.txt?",
-        "Opciones": [
-            "nmap -oN resultado.txt objetivo",
-            "nmap -oX resultado.txt objetivo",
-            "nmap -sV resultado.txt objetivo",
-            "nmap --save resultado.txt objetivo"
-        ],
-        "Respuesta": "nmap -oN resultado.txt objetivo"
-    },
-    {
-        "Pregunta": "¿Qué hace -sU?",
-        "Opciones": [
-            "Escaneo UDP.",
-            "Detección OS.",
-            "Ejecuta scripts por defecto.",
-            "Muestra solo puertos abiertos."
-        ],
-        "Respuesta": "Escaneo UDP."
-    },
-    {
-        "Pregunta": "¿Qué hace -sn?",
-        "Opciones": [
-            "Escanea vulnerabilidades.",
-            "Ping scan: identifica hosts vivos sin escanear puertos.",
-            "Fuerza reinicio del host.",
-            "Escaneo de puertos silencioso."
-        ],
-        "Respuesta": "Ping scan: identifica hosts vivos sin escanear puertos."
-    },
-    {
-        "Pregunta": "¿Qué opción muestra solo puertos open en la salida?",
-        "Opciones": [
-            "--open",
-            "--only-open",
-            "-oG",
-            "-sS"
-        ],
-        "Respuesta": "--open"
-    },
-    {
-        "Pregunta": "¿Para qué sirve usar -T0 o -T1?",
-        "Opciones": [
-            "Acelerar al máximo.",
-            "Escanear solo servicios web.",
-            "Escanear puertos UDP exclusivamente.",
-            "Hacer el escaneo lento y sigiloso (menos ruido)."
-        ],
-        "Respuesta": "Hacer el escaneo lento y sigiloso (menos ruido)."
-    },
-    {
-        "Pregunta": "Si no eres root, ¿qué scan TCP es el recomendable?",
-        "Opciones": [
-            "-sT (connect scan)",
-            "-sS (SYN scan)",
-            "-O (OS detect)",
-            "-A (agresivo)"
-        ],
-        "Respuesta": "-sT (connect scan)"
-    },
-    {
-        "Pregunta": "¿Qué significa la etiqueta open en la salida?",
-        "Opciones": [
-            "El servicio respondió y el puerto está escuchando.",
-            "El puerto está bloqueado por firewall.",
-            "El puerto está cerrado.",
-            "El puerto usa UDP."
-        ],
-        "Respuesta": "El servicio respondió y el puerto está escuchando."
-    },
-    {
-        "Pregunta": "Comando para detectar versión en puerto 22 y guardar en ssh.txt:",
-        "Opciones": [
-            "nmap -sV -oX ssh.txt -p22 objetivo",
-            "nmap -sV -p22 -oN ssh.txt objetivo",
-            "nmap -sU -p22 -oN ssh.txt objetivo",
-            "nmap -A -oG ssh.txt objetivo"
-        ],
-        "Respuesta": "nmap -sV -p22 -oN ssh.txt objetivo"
-    },
-    {
-        "Pregunta": "¿Qué hace -O?",
-        "Opciones": [
-            "Detectar sistema operativo remoto.",
-            "Forzar escaneo UDP.",
-            "Mostrar solo puertos filtrados.",
-            "Ejecutar scripts NSE específicos."
-        ],
-        "Respuesta": "Detectar sistema operativo remoto."
-    },
-    {
-        "Pregunta": "¿Qué hace -sC?",
-        "Opciones": [
-            "Ejecuta el conjunto de scripts NSE por defecto (checks comunes).",
-            "Ejecuta todos los scripts NSE existentes.",
-            "Desactiva scripts.",
-            "Solo ejecuta scripts HTTP."
-        ],
-        "Respuesta": "Ejecuta el conjunto de scripts NSE por defecto (checks comunes)."
-    },
-    {
-        "Pregunta": "¿Cuál comando lista hosts vivos en una red /24?",
-        "Opciones": [
-            "nmap -sn 192.168.0.0/24",
-            "nmap -sV 192.168.0.0/24",
-            "nmap -p- 192.168.0.0/24",
-            "nmap -O 192.168.0.0/24"
-        ],
-        "Respuesta": "nmap -sn 192.168.0.0/24"
-    }
-]
+{
+    "Nombre": "Examen de NMAP",
+    "Descripcion": "",
+    "Preguntas": [
+        {
+            "Pregunta": "Ingrese la flag que se encontro al scanear Puertos y Servicios",
+            "Opciones": [],
+            "Respuesta": "banner_easy_2025"
+        },
+        {
+            "Pregunta": "¿Qué hace Nmap?",
+            "Opciones": [
+                "Escanea redes y hosts en busca de puertos y servicios.",
+                "Es un servidor web.",
+                "Edita archivos de configuración de red.",
+                "Sustituye al firewall del sistema."
+            ],
+            "Respuesta": "Escanea redes y hosts en busca de puertos y servicios."
+        },
+        {
+            "Pregunta": "¿Qué hace la opción -p?",
+            "Opciones": [
+                "Especifica puertos a escanear.",
+                "Cambia el tiempo de espera.",
+                "Activa detección de OS.",
+                "Guarda la salida en un archivo."
+            ],
+            "Respuesta": "Especifica puertos a escanear."
+        },
+        {
+            "Pregunta": "Si Nmap muestra un puerto como filtered, ¿qué significa?",
+            "Opciones": [
+                "Está definitivamente abierto.",
+                "Está cerrado.",
+                "Un filtro (firewall) bloqueó la respuesta y no puede determinarse si está abierto.",
+                "El puerto usa UDP únicamente."
+            ],
+            "Respuesta": "Un filtro (firewall) bloqueó la respuesta y no puede determinarse si está abierto."
+        },
+        {
+            "Pregunta": "¿Qué hace -sV?",
+            "Opciones": [
+                "Escanea solo puertos cerrados.",
+                "Detecta la versión del servicio que corre en el puerto.",
+                "Ejecuta scripts NSE por defecto.",
+                "Realiza escaneo UDP."
+            ],
+            "Respuesta": "Detecta la versión del servicio que corre en el puerto."
+        },
+        {
+            "Pregunta": "¿Qué hace -A?",
+            "Opciones": [
+                "Escanea únicamente puertos altos.",
+                "Hace el escaneo más silencioso.",
+                "Solo detecta OS.",
+                "Modo agresivo: combina -sV, -O, traceroute y scripts NSE."
+            ],
+            "Respuesta": "Modo agresivo: combina -sV, -O, traceroute y scripts NSE."
+        },
+        {
+            "Pregunta": "Diferencia entre -sS y -sT:",
+            "Opciones": [
+                "-sS es SYN scan (stealth, requiere privilegios); -sT es connect (usa la pila del SO).",
+                "-sS es UDP; -sT es TCP.",
+                "-sS hace ping; -sT escanea puertos.",
+                "No hay diferencia."
+            ],
+            "Respuesta": "-sS es SYN scan (stealth, requiere privilegios); -sT es connect (usa la pila del SO)."
+        },
+        {
+            "Pregunta": "Si un host aparece como down, ¿qué opción fuerza a Nmap a intentar escanear puertos de todos modos?",
+            "Opciones": [
+                "-Pn",
+                "-sn",
+                "-sU",
+                "-T5"
+            ],
+            "Respuesta": "-Pn"
+        },
+        {
+            "Pregunta": "¿Cómo escaneas todos los puertos TCP de 172.17.0.2?",
+            "Opciones": [
+                "nmap -p- 172.17.0.2",
+                "nmap -sU 172.17.0.2",
+                "nmap -sn 172.17.0.2",
+                "nmap -O 172.17.0.2"
+            ],
+            "Respuesta": "nmap -p- 172.17.0.2"
+        },
+        {
+            "Pregunta": "¿Qué son los scripts NSE?",
+            "Opciones": [
+                "Extensiones del kernel.",
+                "Errores detectados por Nmap.",
+                "Nmap Scripting Engine: pequeños scripts para detección y checks avanzados.",
+                "Plugins de navegador."
+            ],
+            "Respuesta": "Nmap Scripting Engine: pequeños scripts para detección y checks avanzados."
+        },
+        {
+            "Pregunta": "¿Cómo guardas la salida en texto plano como resultado.txt?",
+            "Opciones": [
+                "nmap -oN resultado.txt objetivo",
+                "nmap -oX resultado.txt objetivo",
+                "nmap -sV resultado.txt objetivo",
+                "nmap --save resultado.txt objetivo"
+            ],
+            "Respuesta": "nmap -oN resultado.txt objetivo"
+        },
+        {
+            "Pregunta": "¿Qué hace -sU?",
+            "Opciones": [
+                "Escaneo UDP.",
+                "Detección OS.",
+                "Ejecuta scripts por defecto.",
+                "Muestra solo puertos abiertos."
+            ],
+            "Respuesta": "Escaneo UDP."
+        },
+        {
+            "Pregunta": "¿Qué hace -sn?",
+            "Opciones": [
+                "Escanea vulnerabilidades.",
+                "Ping scan: identifica hosts vivos sin escanear puertos.",
+                "Fuerza reinicio del host.",
+                "Escaneo de puertos silencioso."
+            ],
+            "Respuesta": "Ping scan: identifica hosts vivos sin escanear puertos."
+        },
+        {
+            "Pregunta": "¿Qué opción muestra solo puertos open en la salida?",
+            "Opciones": [
+                "--open",
+                "--only-open",
+                "-oG",
+                "-sS"
+            ],
+            "Respuesta": "--open"
+        },
+        {
+            "Pregunta": "¿Para qué sirve usar -T0 o -T1?",
+            "Opciones": [
+                "Acelerar al máximo.",
+                "Escanear solo servicios web.",
+                "Escanear puertos UDP exclusivamente.",
+                "Hacer el escaneo lento y sigiloso (menos ruido)."
+            ],
+            "Respuesta": "Hacer el escaneo lento y sigiloso (menos ruido)."
+        },
+        {
+            "Pregunta": "Si no eres root, ¿qué scan TCP es el recomendable?",
+            "Opciones": [
+                "-sT (connect scan)",
+                "-sS (SYN scan)",
+                "-O (OS detect)",
+                "-A (agresivo)"
+            ],
+            "Respuesta": "-sT (connect scan)"
+        },
+        {
+            "Pregunta": "¿Qué significa la etiqueta open en la salida?",
+            "Opciones": [
+                "El servicio respondió y el puerto está escuchando.",
+                "El puerto está bloqueado por firewall.",
+                "El puerto está cerrado.",
+                "El puerto usa UDP."
+            ],
+            "Respuesta": "El servicio respondió y el puerto está escuchando."
+        },
+        {
+            "Pregunta": "Comando para detectar versión en puerto 22 y guardar en ssh.txt:",
+            "Opciones": [
+                "nmap -sV -oX ssh.txt -p22 objetivo",
+                "nmap -sV -p22 -oN ssh.txt objetivo",
+                "nmap -sU -p22 -oN ssh.txt objetivo",
+                "nmap -A -oG ssh.txt objetivo"
+            ],
+            "Respuesta": "nmap -sV -p22 -oN ssh.txt objetivo"
+        },
+        {
+            "Pregunta": "¿Qué hace -O?",
+            "Opciones": [
+                "Detectar sistema operativo remoto.",
+                "Forzar escaneo UDP.",
+                "Mostrar solo puertos filtrados.",
+                "Ejecutar scripts NSE específicos."
+            ],
+            "Respuesta": "Detectar sistema operativo remoto."
+        },
+        {
+            "Pregunta": "¿Qué hace -sC?",
+            "Opciones": [
+                "Ejecuta el conjunto de scripts NSE por defecto (checks comunes).",
+                "Ejecuta todos los scripts NSE existentes.",
+                "Desactiva scripts.",
+                "Solo ejecuta scripts HTTP."
+            ],
+            "Respuesta": "Ejecuta el conjunto de scripts NSE por defecto (checks comunes)."
+        },
+        {
+            "Pregunta": "¿Cuál comando lista hosts vivos en una red /24?",
+            "Opciones": [
+                "nmap -sn 192.168.0.0/24",
+                "nmap -sV 192.168.0.0/24",
+                "nmap -p- 192.168.0.0/24",
+                "nmap -O 192.168.0.0/24"
+            ],
+            "Respuesta": "nmap -sn 192.168.0.0/24"
+        }
+    ]
+}
